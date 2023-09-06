@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../Assets/css/bootstrap.css">
+</head>
+<body onload="iniciada()">
+    <div class="card position-absolute position-absolute start-50 top-50 translate-middle border-black">
+        <h5 class="card-header h3 text-center bg-info-subtle">Bienvenido</h5>
+        <div class="card-body" id="botones">
+          <h4 class="card-title text-center">Inicia sesión o registrate</h4>
+          <br>
+          <div class="text-center">
+            <p>
+                <button onclick="sesion()" class="btn btn-success border-black btn-lg" type="button">Iniciar Sesión</button>
+              </p>
+              <p>
+                <button onclick="registro()" class="btn btn-warning border-black btn-lg" type="button">Registrate</button>
+              </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body" id="Sesion" style="visibility: hidden;">
+        <h4 class="card-title text-center">Inicio de sesion</h4>
+        <div class="text-center">
+            <form id="iniciarSesion">
+                <label class="form-label">
+                    <input class="form-text mb-2 form-control-lg me-3" type="text" name="Nombre" placeholder="Nombre de usuario">
+                    <br>
+                    <input class="form-text mb-2 form-control-lg me-3" type="password" name="Password" placeholder="Contraseña">
+                </label>
+                <label class="form-label">
+                    <button class="btn btn-success btn-lg" type="submit">Iniciar Sesión</button>
+                </label>
+            </form>
+            <p>
+            <h5>¿Aún no tienes una cuenta?</h5>
+              <button onclick="registrob()" class="btn btn-warning btn-lg border-black" type="button">Registrate</button>
+            </p>
+        </div>
+      </div>
+
+        <div class="card-body" id="Registrate" style="visibility: hidden;">
+            <h4 class="card-title text-center">Registrate</h4>
+            <div class="text-center">
+                <form id="Registro">
+                    <label class="form-label">
+                        <input class="form-text mb-2 form-control-lg me-3" type="text" name="Nombre" placeholder="Nombre de usuario">
+                        <br>
+                        <input class="form-text mb-2 form-control-lg me-3" type="password" name="Password" placeholder="Contraseña">
+                    </label>
+                    <label class="form-label">
+                        <button class="btn btn-success btn-lg" type="submit">Registrate</button>
+                    </label>
+                </form>
+                <p>
+                <h5>¿Ya posees una cuenta?</h5>
+                  <button onclick="sesionb()" class="btn btn-warning btn-lg border-black" type="button">Iniciar Sesión</button>
+                </p>
+            </div>
+        </div>
+</body>
+    <script src="../../Assets/js/bootstrap.bundle.js"></script>
+    <script src="functionsUsuario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
