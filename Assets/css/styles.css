@@ -1,0 +1,82 @@
+body{
+    overflow-x: hidden;
+}
+
+footer{
+    width: 70%;
+    height: auto;
+    /*  poner footer abajo */
+    position: fixed;
+    left: 0;
+    bottom: 1px;
+}
+
+#Texto{
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    padding: 3px;
+    padding-left: 10px;
+    background-color: white;
+    border-color: white;
+    width: 90%;
+}
+
+#contenedor{
+	height: 532.5px;
+	width: 70%;
+	border: 1px solid black;
+	background: whitesmoke;
+	overflow-y: scroll;
+}
+
+#mensajes{
+    height: auto;
+}
+
+#mensaje{
+    border-radius: 5px;
+    border: 1px black solid;
+    background-color: gray;
+    min-width: 30%;
+}
+
+table{
+    width: 100%;
+    height: max-content;
+    margin-top: 5px;
+}
+
+tr{
+    height: auto;
+}
+
+.celdaizq{
+    width: 35%;
+}
+
+.celdader{
+    width: 35%;
+}
+
+.textizq{
+    background-color: aqua;
+    height: 100%;
+    border: 1px aqua solid;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.textder{
+    background-color: green;
+    height: 100%;
+    border: 1px green solid;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 2px;
+    .parr{
+        color: white;
+    }
+}
