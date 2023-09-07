@@ -1,4 +1,4 @@
-const baseUrl = "https://juanca3789.github.io/";
+const baseUrl = "http://34.155.100.253/";
 function carga() {
   sessionStorage.setItem("idchat", 0);
   let arrMsj = [];

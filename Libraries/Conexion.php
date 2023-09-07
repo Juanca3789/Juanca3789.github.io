@@ -1,5 +1,5 @@
 <?php
-    require_once ("https://juanca3789.github.io/Config/Config.php");
+    require_once ("http://34.155.100.253/Config/Config.php");
     class Conexion{
         public function conect(){
             $mysql = new mysqli(server, user, password, database);

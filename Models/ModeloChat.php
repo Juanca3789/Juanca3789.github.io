@@ -1,5 +1,5 @@
 <?php
-    require_once "https://juanca3789.github.io/Libraries/Conexion.php";
+    require_once "http://34.155.100.253/Libraries/Conexion.php";
     class Chat{
         private $conexion;
         public function __construct()

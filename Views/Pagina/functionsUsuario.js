@@ -1,5 +1,5 @@
 var aux;
-const baseUrl = "https://juanca3789.github.io/";
+const baseUrl = "http://34.155.100.253/";
 
 function iniciada(){
     if(sessionStorage.getItem("id") != null){
