@@ -1,5 +1,5 @@
 var aux;
-const baseUrl = "http://localhost/";
+const baseUrl = "https://juanca3789.github.io/";
 
 function iniciada(){
     if(sessionStorage.getItem("id") != null){
@@ -11,7 +11,7 @@ function iniciada(){
       }
       ).then((result) => {
         if(result.isConfirmed){
-          window.location.assign(baseUrl+"WEB/Views/Pagina/pagina.html");
+          window.location.assign(baseUrl+"Views/Pagina/pagina.html");
         }
       })
     }
@@ -76,7 +76,7 @@ function formSesion() {
       try {
         const data = new FormData(formulario);
         let resp = await fetch(
-          "http://localhost/WEB/Controllers/Usuario/Sesion.php",
+          baseUrl + "Controllers/Usuario/Sesion.php",
           {
             method: "POST",
             mode: "cors",
@@ -112,7 +112,7 @@ function formRegistro() {
       try {
         const data = new FormData(formulario);
         let resp = await fetch(
-          "http://localhost/WEB/Controllers/Usuario/Registro.php",
+          baseUrl + "Controllers/Usuario/Registro.php",
           {
             method: "POST",
             mode: "cors",
@@ -145,7 +145,7 @@ function swalRegistroA() {
   }
   ).then((result) => {
       if (result.isConfirmed){
-          window.location.assign(baseUrl+"WEB/Views/Pagina/index.html");
+          window.location.assign(baseUrl+"Views/Pagina/index.html");
       }
   });
 }
@@ -160,7 +160,7 @@ function swalRegistroC() {
   }
   ).then((result) => {
       if (result.isConfirmed){
-          window.location.assign(baseUrl+"WEB/Views/Pagina/index.html");
+          window.location.assign(baseUrl+"Views/Pagina/index.html");
       }
   });
 }
@@ -175,7 +175,7 @@ function swalSesionA(){
     }
     ).then((result) => {
         if (result.isConfirmed){
-            window.location.assign(baseUrl+"WEB/Views/Pagina/pagina.html");
+            window.location.assign(baseUrl+"Views/Pagina/pagina.html");
         }
     });
 }
@@ -190,7 +190,7 @@ function swalSesionC(){
   }
   ).then((result) => {
       if (result.isConfirmed){
-          window.location.assign(baseUrl+"WEB/Views/Pagina/index.html");
+          window.location.assign(baseUrl+"Views/Pagina/index.html");
       }
   });
 }

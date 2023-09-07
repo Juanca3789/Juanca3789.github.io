@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost/";
+const baseUrl = "https://juanca3789.github.io/";
 function carga() {
   sessionStorage.setItem("idchat", 0);
   let arrMsj = [];
@@ -10,7 +10,7 @@ function carga() {
       confirmButtonText: "Ok",
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.assign(baseUrl + "WEB/Views/Pagina/index.html");
+        window.location.assign(baseUrl + "Views/Pagina/index.html");
       }
     });
   } else {
@@ -29,7 +29,7 @@ async function obtenerChats(arrMsj) {
   let form = new FormData();
   form.append("id", sessionStorage.getItem("id"));
   let resp = await fetch(
-    "http://localhost/WEB/Controllers/Chat/ObtenerChats.php",
+    baseUrl + "Controllers/Chat/ObtenerChats.php",
     {
       method: "POST",
       mode: "cors",
@@ -113,7 +113,7 @@ function nuevoChat() {
     form.append("usuario2", arr.value.login);
     form.append("contrasena", generarC());
     let resp = await fetch(
-      "http://localhost/WEB/Controllers/Chat/NuevoChat.php",
+      baseUrl + "Controllers/Chat/NuevoChat.php",
       {
         method: "POST",
         mode: "cors",
@@ -149,7 +149,7 @@ async function leerMensajes(idchat, contrachat) {
   form.append("idusuario", sessionStorage.getItem("id"));
   form.append("idchat", idchat);
   let resp = await fetch(
-    "http://localhost/WEB/Controllers/Mensaje/LeerMensajes.php",
+    baseUrl + "Controllers/Mensaje/LeerMensajes.php",
     {
       method: "POST",
       mode: "cors",
@@ -244,7 +244,7 @@ async function nuevoMensaje() {
     data.append("idchat", sessionStorage.getItem("idchat"));
     data.append("Textos", Text);
     let resp = await fetch(
-      "http://localhost/WEB/Controllers/Mensaje/NuevoMensaje.php",
+      baseUrl + "Controllers/Mensaje/NuevoMensaje.php",
       {
         method: "POST",
         mode: "cors",

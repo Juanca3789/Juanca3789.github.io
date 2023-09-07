@@ -1,5 +1,5 @@
 <?php
-    include_once ("C:/Program Files/xampp/htdocs/WEB/Config/Config.php");
+    require_once ("https://juanca3789.github.io/Config/Config.php");
     class Conexion{
         public function conect(){
             $mysql = new mysqli(server, user, password, database);
